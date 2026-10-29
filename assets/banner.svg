@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="260" viewBox="0 0 1200 260">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#075985"/>
+      <stop offset="0.5" stop-color="#0284C7"/>
+      <stop offset="1" stop-color="#38BDF8"/>
+    </linearGradient>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M40 0H0V40" fill="none" stroke="#FFFFFF" stroke-opacity="0.08"/>
+    </pattern>
+    <filter id="blur" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="40"/>
+    </filter>
+    <clipPath id="frame">
+      <rect width="1200" height="260" rx="20"/>
+    </clipPath>
+  </defs>
+
+  <style>
+    .font  { font-family: 'Segoe UI', Ubuntu, 'Helvetica Neue', Arial, sans-serif; }
+    .hello { font-size: 18px; font-weight: 600; letter-spacing: 6px; fill: #BAE6FD; }
+    .name  { font-size: 60px; font-weight: 700; fill: #FFFFFF; }
+    .role  { font-size: 22px; font-weight: 500; fill: #E0F2FE; }
+    .deco  { font-size: 96px; font-weight: 700; fill: #FFFFFF; fill-opacity: 0.1; }
+    .in    { animation: rise 0.9s ease-out both; }
+    .d1    { animation-delay: 0.15s; }
+    .d2    { animation-delay: 0.3s; }
+    .w1    { animation: slide600 14s linear infinite; }
+    .w2    { animation: slide400 10s linear infinite; }
+    .w3    { animation: slide600 20s linear infinite reverse; }
+    .glow  { animation: pulse 6s ease-in-out infinite alternate; }
+    @keyframes rise     { from { opacity: 0; transform: translateY(14px); } to { opacity: 1; transform: translateY(0); } }
+    @keyframes slide600 { from { transform: translateX(0); } to { transform: translateX(-600px); } }
+    @keyframes slide400 { from { transform: translateX(0); } to { transform: translateX(-400px); } }
+    @keyframes pulse    { from { opacity: 0.35; } to { opacity: 0.75; } }
+  </style>
+
+  <g clip-path="url(#frame)">
+    <rect width="1200" height="260" fill="url(#bg)"/>
+    <rect width="1200" height="260" fill="url(#grid)"/>
+
+    <circle class="glow" cx="1060" cy="30" r="140" fill="#7DD3FC" filter="url(#blur)"/>
+    <circle class="glow" cx="140" cy="230" r="120" fill="#0369A1" filter="url(#blur)"/>
+
+    <text class="font deco" x="120" y="160" text-anchor="middle">{ }</text>
+    <text class="font deco" x="1080" y="160" text-anchor="middle">&lt;/&gt;</text>
+
+    <path class="w1" fill="#FFFFFF" fill-opacity="0.10"
+          d="M0 205 Q150 180 300 205 T600 205 T900 205 T1200 205 T1500 205 T1800 205 V260 H0 Z"/>
+    <path class="w2" fill="#FFFFFF" fill-opacity="0.12"
+          d="M0 222 Q100 204 200 222 T400 222 T600 222 T800 222 T1000 222 T1200 222 T1400 222 T1600 222 V260 H0 Z"/>
+    <path class="w3" fill="#FFFFFF" fill-opacity="0.16"
+          d="M0 238 Q150 252 300 238 T600 238 T900 238 T1200 238 T1500 238 T1800 238 V260 H0 Z"/>
+
+    <text class="font hello in" x="600" y="78" text-anchor="middle">HI, I'M</text>
+    <text class="font name in d1" x="600" y="138" text-anchor="middle">Morteza Ghiasi</text>
+    <text class="font role in d2" x="600" y="176" text-anchor="middle">Backend &amp; Full-Stack Developer · PHP / Laravel · Lua</text>
+  </g>
+</svg>
