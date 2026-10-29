@@ -51,6 +51,16 @@ class Morteza extends Developer
   <img height="180" src="./profile/top-langs.svg" alt="Top languages" />
 </p>
 
+## 🗓️ Contribution graph
+
+<p align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="./profile/snake-dark.svg" />
+    <source media="(prefers-color-scheme: light)" srcset="./profile/snake-light.svg" />
+    <img alt="My GitHub contribution graph, with a snake eating the squares" src="./profile/snake-light.svg" width="100%" />
+  </picture>
+</p>
+
 ## 📬 Let's work together
 
 I'm open to freelance and contract work, especially backend, API, and Lua projects. If you have something in mind, Telegram is the fastest way to reach me. I'm on Tehran time (UTC+3:30).
