@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="140" viewBox="0 0 1200 140">
+  <defs>
+    <clipPath id="frame">
+      <rect width="1200" height="140" rx="20"/>
+    </clipPath>
+  </defs>
+
+  <style>
+    .w1   { animation: slide 16s linear infinite; }
+    .w2   { animation: slide 11s linear infinite reverse; }
+    .w3   { animation: slide 22s linear infinite; }
+    .note { font: 500 16px 'Segoe UI', Ubuntu, 'Helvetica Neue', Arial, sans-serif; fill: #E0F2FE; letter-spacing: 1px; }
+    @keyframes slide { from { transform: translateX(0); } to { transform: translateX(-600px); } }
+  </style>
+
+  <g clip-path="url(#frame)">
+    <path class="w1" fill="#38BDF8" fill-opacity="0.35"
+          d="M0 40 Q150 15 300 40 T600 40 T900 40 T1200 40 T1500 40 T1800 40 V140 H0 Z"/>
+    <path class="w2" fill="#0EA5E9" fill-opacity="0.6"
+          d="M0 58 Q150 80 300 58 T600 58 T900 58 T1200 58 T1500 58 T1800 58 V140 H0 Z"/>
+    <path class="w3" fill="#0284C7"
+          d="M0 76 Q150 56 300 76 T600 76 T900 76 T1200 76 T1500 76 T1800 76 V140 H0 Z"/>
+    <text class="note" x="600" y="118" text-anchor="middle">Thanks for stopping by · Let's build something together</text>
+  </g>
+</svg>
